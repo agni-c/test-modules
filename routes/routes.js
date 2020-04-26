@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const { check, validationResult } = require("express-validator");
-const { signup, signin, private } = require("../controller/auth");
+const { signup, signin } = require("../controller/auth");
+const { private } = require('../controller/middleware');
 
 router.post("/signup", signup);
 router.post("/signin", signin);
